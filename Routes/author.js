@@ -1,15 +1,15 @@
 const express = require('express')
-const { getAllAuthor, getAuthorById, updateAuthorById, deleteAuthorById } = require('../controllers/authorController')
+const { getAllAuthor, getAuthorById, updateAuthorById, deleteAuthorById, addAuthor } = require('../controllers/authorController')
 const router = express.Router()
 
 router.get('/', getAllAuthor)
 
-router.get('/:articleId', getAuthorById)
+router.get('/:authorId', getAuthorById)
 
-router.post('/', addArtcile)
+router.post('/', addAuthor)
 
-router.patch('/:articleId', updateAuthorById)
+router.patch('/:authorId', updateAuthorById)
 
-router.delete('/:articleId', deleteAuthorById)
+router.delete('/:authorId', deleteAuthorById)
 
 module.exports = router
